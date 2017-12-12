@@ -27,7 +27,10 @@ router.put('/pokemon/edit/:id', (req, res) => {
 })
 
 router.post('/pokemon/add', (req, res) => {
-
+  const element = req.body.pokemon
+  Pokemon.add(element)
+    .then(result => res.json(result))
+    .then(error => res.send('Please add something'))
 })
 
 function remove(element, callback) {
@@ -41,6 +44,17 @@ function edit(element, callback) {
   pokemon.name.replace(old, changed)
   pokemon.pokedex.replace(old, changed)
   pokemon.image.replace(old, changed)
+  callback(pokemon)
+}
+
+function add(element, callback) {
+  let poke = {
+    name: name,
+    pokedex: pokedex,
+    evolves_from: evolvesFrom,
+    image: image
+  }
+  pokemon.push(poke)
   callback(pokemon)
 }
 
