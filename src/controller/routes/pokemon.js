@@ -20,23 +20,28 @@ router.delete('/pokemon/remove/:id', (req, res) => {
 })
 
 router.put('/pokemon/edit/:id', (req, res) => {
-  const element = req.params.id
-  if (!req.params.id) {
-    return 'Nothing to see. Nothing to edit.'
-  } else if (typeof element === 'integer') {
-    function edit(pokemon, element) {
-
-    }
-  }
+  const element = parseInt(req.params.id)
+  Pokemon.edit(element)
+    .then(result => res.json(result))
+    .catch(error => res.send('Nothing to change'))
 })
 
 router.post('/pokemon/add', (req, res) => {
 
 })
-//
-// function remove(element, callback) {
-//   pokemon.splice(element, 1)
-//   callback(pokemon)
-// }
+
+function remove(element, callback) {
+  pokemon.splice(element, 1)
+  callback(pokemon)
+}
+
+function edit(element, callback) {
+  let old
+  let changed
+  pokemon.name.replace(old, changed)
+  pokemon.pokedex.replace(old, changed)
+  pokemon.image.replace(old, changed)
+  callback(pokemon)
+}
 
 module.exports = router
