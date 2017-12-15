@@ -1,17 +1,13 @@
 const express = require('express');
 const app = express();
+const pokemon = require('../model/seeds/pokemon.js')
+const pokeRoutes = require('../controller/routes/pokemon.js')
 
+const method = 'POST'
 
-app.post('/', (req, res) => {
-  let add
-  if(!req.body.add) {
-    res.json('Enter something to add')
-  } else {
-    res.render('')
-  }
-})
-
-//'POST' request
-//const add
+fetch('/pokemon/add', method) {
+  .then(result => response)
+  .catch(error)
+}
 
 module.exports = add
