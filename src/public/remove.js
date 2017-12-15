@@ -1,7 +1,13 @@
 const express = require('express');
 const app = express();
+const pokemon = require('../model/seeds/pokemon.js')
+const pokeRoutes = require('../controller/routes/pokemon.js')
 
-//'DELETE' request
-//const remove
+const method = 'DELETE'
+
+fetch('/pokemon/remove/:id', method) {
+  .then(result => response)
+  .catch(error)
+}
 
 module.exports = remove

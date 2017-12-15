@@ -1,7 +1,13 @@
 const express = require('express');
 const app = express();
+const pokemon = require('../model/seeds/pokemon.js')
+const pokeRoutes = require('../controller/routes/pokemon.js')
 
-//'GET' request
-//const read
+const method = 'GET'
+
+fetch('/all/pokemon', method) {
+  .then(result => response)
+  .catch(error)
+}
 
 module.exports = read
