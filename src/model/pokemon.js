@@ -11,5 +11,5 @@ function remove(element) {
 }
 
 module.exports = {
-  remove,
+  remove
 }

@@ -1,5 +1,3 @@
-const express = require('express');
-const app = express();
 const pokemon = require('../model/seeds/pokemon.js')
 const pokeRoutes = require('../controller/routes/pokemon.js')
 
