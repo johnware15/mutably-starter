@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/style.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <script type="text/javascript" src="/script.js"></script>
+    <script type="text/javascript" src="/public/script.js"></script>
   </head>
   <body class="container">
     <div class="col-sm-8 col-sm-offset-2">
@@ -14,8 +14,18 @@
       </nav>
       <div class="panel panel-default">
         <div class="panel-heading">[Your Chosen Resource]</div>
+        <ul class="add-pokemon">
+          <% pokemon.push({
+            <li><input class="add" value="name"><%= pokemon.name %></li>
+            <li><input class="add" value="pokedex"><%= pokemon.pokedex %></li>
+            <li><input class="add" value="evolves_from"><%= pokemon.evolves_from %></li>
+            <li><input class="add" value="image"><%= pokemon.image %></li>
+          <% }); %>
         <ul class="list-group">
-          <!-- your resource items here -->
+
+          <% pokemon.forEach(function(pokemon) { %>
+            <li><%= pokemon.name %> - <%= pokemon.pokedex %> - <%= pokemon.evolves_from %> - <%= pokemon.image %> <button class="edit" value="edit"> <button class="remove" value="remove"> </li>
+          <% }); %>
         </ul>
       </div>
     </div>

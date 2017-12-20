@@ -6,26 +6,26 @@ const remove = require('remove.js');
 let pokemon
 console.log("Sanity Check: JS is working!");
 
-$(document).ready(add, function(){
-  $("button").click(function {
+$(document).ready(function(){
+  $("button").click(add, function {
     $(this).append(pokemon)
   })
 });
 
-$(document).ready(edit, function() {
-  $("button").click(function() {
+$(document).ready(function() {
+  $("button").click(edit, function() {
     $(this).html(pokemon)
   })
 })
 
-$(document).ready(read, function() {
-  $("button").alert(function() {
+$(document).ready(function() {
+  $("button").alert(read, function() {
     $(*).html(pokemon)
   })
 })
 
-$(document).ready(remove, function() {
-  $("button").click(function() {
+$(document).ready(function() {
+  $("button").click(remove, function() {
     $(this).html(pokemon)
   })
 })

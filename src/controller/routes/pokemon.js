@@ -33,6 +33,17 @@ router.post('/pokemon/add', (req, res) => {
     .then(error => res.send('Please add something'))
 })
 
+router.get('/', (req, res) => {
+  if(!router) {
+    return 'We have a problem'
+  } else {
+    res.render('index', {
+      pokemon: []
+    })
+  }
+})
+
+
 function remove(element, callback) {
   pokemon.splice(element, 1)
   callback(pokemon)
