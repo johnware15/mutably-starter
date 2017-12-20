@@ -1,1 +1,21 @@
 /*Custom styles here*/
+button {
+  border-radius: 5px;
+  color: white;
+}
+
+.edit {
+  background-color: blue;
+}
+
+.remove {
+  background-color: red;
+}
+
+.add {
+  background-color: green;
+}
+
+li {
+  list-style: none;
+}
